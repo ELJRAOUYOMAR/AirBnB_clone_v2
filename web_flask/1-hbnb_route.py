@@ -10,8 +10,10 @@ def hello():
     """ def doc """
     return "Hello HBNB!"
 
+
 @app.route("/hbnb", strict_slashes=False)
-def hbnb():                                                                                                                          """ simple output """
+def hbnb():
+    """ def doc """
     return "HBNB"
 
 
