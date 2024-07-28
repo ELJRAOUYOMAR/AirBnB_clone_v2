@@ -18,16 +18,18 @@ def hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def c(text):
-    """ def doc """
-    return 'c {}'.format(text.replace("_", " "))
+def c_is_fun(text):
+    """ C is fun """
+    text = text.replace("_", " ")
+    return f"C {text}"
 
 
 @app.route('/python', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def python(text):
-    """ def doc """
-    return 'Python {}'.format(text.replace("_", " "))
+def python_is_fun(text):
+    """ Python is fun """
+    text = text.replace("_", " ")
+    return f"Python {text}"
 
 
 if __name__ == "__main__":
