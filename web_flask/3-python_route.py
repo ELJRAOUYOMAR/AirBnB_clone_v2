@@ -30,7 +30,7 @@ def python_is_fun(text):
     """ /python/<text>: display “Python ”,
         followed by the value of the text variable
         (replace underscore _ symbols with a space ).
-        The default value of text is “is cool.”
+        The default value of text is “is cool”
     """
     text = text.replace("_", " ")
     return f"Python {text}"
