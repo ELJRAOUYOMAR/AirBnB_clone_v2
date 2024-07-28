@@ -16,6 +16,7 @@ def hbnb():
     """ def doc """
     return "HBNB"
 
+
 @app.route("/c/<text>", strict_slashes=False)
 def c_is_fun(text):
     """ display “C ” followed by the value of the text variable 
@@ -23,6 +24,7 @@ def c_is_fun(text):
     """
     text = text.replace("_", " ")
     return f"C {text}"
+
 
 @app.route("/python", defaults={"text": "is cool"}, strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
