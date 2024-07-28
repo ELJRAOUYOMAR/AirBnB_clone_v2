@@ -17,20 +17,19 @@ def hbnb():
     return "HBNB"
 
 
-@app.route("/c/<text>", strict_slashes=False)
+@app.route('/c/<text>', strict_slashes=False)
 def c_is_fun(text):
-    """ display “C ” followed by the value of the text variable 
-    (replace underscore _ symbols with a space ) 
-    """
+    """ C is fun """
     text = text.replace("_", " ")
     return f"C {text}"
 
 
 @app.route('/python', defaults={'text': 'is cool'}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def python(text):
-    """ python with text, default text is 'is cool' """
-    return 'Python {}'.format(text.replace("_", " "))
+def python_is_fun(text):
+    """ Python is fun """
+    text = text.replace("_", " ")
+    return f"Python {text}"
 
 
 if __name__ == "__main__":
