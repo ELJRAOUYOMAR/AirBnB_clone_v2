@@ -26,16 +26,11 @@ def c_is_fun(text):
     return f"C {text}"
 
 
-@app.route("/python", defaults={"text": "is cool"}, strict_slashes=False)
-@app.route("/python/<text>", strict_slashes=False)
-def python_is_fun(text):
-    """ /python/<text>: display “Python ”,
-        followed by the value of the text variable
-        (replace underscore _ symbols with a space ).
-        The default value of text is “is cool.”
-    """
-    text = text.replace("_", " ")
-    return f"Python {text}"
+@app.route('/python', defaults={'text': 'is cool'}, strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
+def python(text):
+    """ python with text, default text is 'is cool' """
+    return 'Python {}'.format(text.replace("_", " "))
 
 
 if __name__ == "__main__":
